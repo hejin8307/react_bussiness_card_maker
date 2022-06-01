@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+@value makerDarkBeige, makerLightBeige, makerLightPink, makerDarkPink from '../../common/colors.css';
+
+.container {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 3rem;
+  color: makerDarkPink;
+}
+
+.login {
+  font-size: 1.2rem;
+  margin: 0;
+  color: makerDarkBeige;
+}
+
+.loginBtn {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginBtn button {
+  font-family: 'Secular One', sans-serif;
+  font-size: 1rem;
+  color: makerDarkBeige;
+  background-color: makerLightPink;
+  border: 0;
+  border-radius: 0.5rem;
+  margin: 0.2rem 0;
+  cursor: pointer;
+}

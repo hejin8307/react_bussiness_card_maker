@@ -1,0 +1,14 @@
+@value makerMiddlePink from '../../common/colors.css';
+
+.header {
+  text-align: center;
+  border: 1px solid black;
+  background-color: makerMiddlePink;
+}
+
+.logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
