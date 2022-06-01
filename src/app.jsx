@@ -17,7 +17,7 @@ function App({authService}) {
             </div>
           }
         />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home authService={authService} />} />
       </Routes>
     </BrowserRouter>
   );

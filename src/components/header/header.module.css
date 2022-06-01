@@ -1,14 +1,25 @@
-@value makerMiddlePink from '../../common/colors.css';
+@value makerWhite, makerDarkBeige, makerMiddlePink from '../../common/colors.css';
+
+h1 {
+  margin: 0;
+}
 
 .header {
   text-align: center;
-  border: 1px solid black;
+  color: makerDarkBeige;
   background-color: makerMiddlePink;
+  padding: 1.5rem 0;
 }
 
 .logout {
   position: absolute;
   top: 0;
   right: 0;
+  font-weight: 900;
   margin: 1rem;
+  padding: 0.3rem 0.7rem;
+  border: 0;
+  border-radius: 1rem;
+  color: makerDarkBeige;
+  background-color: makerWhite;
 }
