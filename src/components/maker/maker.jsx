@@ -1,14 +1,12 @@
 import React from 'react';
+import AddCardForm from '../add_card_form/addCardForm';
 import styles from './maker.module.css';
 
-const Maker = (props) => {
-  const onAddCard = () => {};
+const Maker = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <h1 className={styles.title}>Card Maker</h1>
-      <button className={styles.addBtn} onClick={onAddCard}>
-        <i className="fa-solid fa-plus"></i>
-      </button>
+      <AddCardForm />
     </div>
   );
 };

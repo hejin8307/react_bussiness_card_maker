@@ -1,0 +1,12 @@
+@value makerWhite, makerDarkBeige, makerMiddlePink from '../../common/colors.css';
+
+p {
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  color: makerDarkBeige;
+  background-color: makerMiddlePink;
+  padding: 2rem;
+}

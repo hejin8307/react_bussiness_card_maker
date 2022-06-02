@@ -3,10 +3,11 @@ import styles from './home.module.css';
 import Header from '../header/header';
 import Maker from '../maker/maker';
 import Preview from '../preview/preview';
+import Footer from '../footer/footer';
 
 const Home = ({authService}) => {
   return (
-    <>
+    <div className={styles.content}>
       <Header authService={authService} />
       <section className={styles.main}>
         <div className={styles.maker}>
@@ -16,7 +17,8 @@ const Home = ({authService}) => {
           <Preview />
         </div>
       </section>
-    </>
+      <Footer />
+    </div>
   );
 };
 

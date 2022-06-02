@@ -3,7 +3,7 @@
 
 @value makerDarkBeige, makerLightBeige, makerLightPink, makerDarkPink from '../../common/colors.css';
 
-.container {
+.content {
   background-color: white;
   border-radius: 1rem;
   padding: 2.5rem;

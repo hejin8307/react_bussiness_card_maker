@@ -17,7 +17,7 @@ const Login = ({authService}) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <h1 className={styles.title}>Business Card Maker</h1>
       <p className={styles.login}>- LOGIN -</p>
       <div className={styles.loginBtn}>

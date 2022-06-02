@@ -1,0 +1,34 @@
+@value makerWhite, makerDarkBeige, makerMiddlePink from '../../common/colors.css';
+
+input,
+textarea,
+select {
+  border: 1px solid RGB(223, 214, 207, 0.7);
+}
+
+select {
+  color: gray;
+}
+
+.content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+.content > *:nth-child(-n + 4) {
+  flex: 1 1 30%;
+}
+
+.content > *:nth-child(n + 4):nth-child(-n + 5) {
+  flex: 1 1 45%;
+}
+
+.content > *:nth-child(n + 5) {
+  flex: 1 1 100%;
+}
+
+.deleteBtn {
+  border: 0;
+}

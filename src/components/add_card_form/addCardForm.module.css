@@ -1,0 +1,10 @@
+@value makerWhite, makerDarkBeige, makerMiddlePink from '../../common/colors.css';
+
+.addBtn {
+  font-size: 5rem;
+  color: makerDarkBeige;
+  margin: 1rem 0;
+  padding: 3rem;
+  border: 0;
+  border-radius: 1rem;
+}
