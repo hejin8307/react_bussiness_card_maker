@@ -1,7 +1,12 @@
 import React from 'react';
+import styles from './preview.module.css';
 
 const Preview = (props) => {
-  return <h1>hello</h1>;
+  return (
+    <section className={styles.content}>
+      <h1 className={styles.title}>Card Preview</h1>
+    </section>
+  );
 };
 
 export default Preview;

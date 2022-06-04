@@ -6,23 +6,14 @@ import Login from './components/login/login';
 
 function App({authService, repository}) {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={
-            <div className={styles.login}>
-              <Login authService={authService} />
-            </div>
-          }
-        />
-        <Route
-          path="/home"
-          element={<Home authService={authService} repository={repository} />}
-        />
-      </Routes>
-    </BrowserRouter>
+    <div className={styles.app}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<Login authService={authService} />} />
+          <Route path="/home" element={<Home authService={authService} />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

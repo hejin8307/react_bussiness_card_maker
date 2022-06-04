@@ -4,10 +4,10 @@ import styles from './maker.module.css';
 
 const Maker = () => {
   return (
-    <div className={styles.content}>
+    <section className={styles.content}>
       <h1 className={styles.title}>Card Maker</h1>
       <AddCardForm />
-    </div>
+    </section>
   );
 };
 

@@ -7,9 +7,11 @@ h1 {
 }
 
 .header {
+  position: relative;
   font-family: 'Caveat Brush', cursive;
   font-size: 1.4rem;
   text-align: center;
+  width: 100%;
   color: makerDarkBeige;
   background-color: makerMiddlePink;
   padding: 1.5rem 0;
@@ -17,10 +19,9 @@ h1 {
 
 .logout {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
   font-weight: 900;
-  margin: 1rem;
   padding: 0.3rem 0.7rem;
   border: 0;
   border-radius: 1rem;
