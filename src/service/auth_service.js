@@ -6,6 +6,7 @@ import {
 } from 'firebase/auth';
 
 class AuthService {
+  //어플리케이션에서 사용자가 로그인, 로그아웃을 하는 것을 관리함
   constructor() {
     this.firebaseAuth = getAuth();
     this.googleAuthProvider = new GoogleAuthProvider();
