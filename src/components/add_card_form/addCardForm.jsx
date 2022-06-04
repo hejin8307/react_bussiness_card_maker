@@ -13,7 +13,7 @@ const AddCardForm = () => {
   };
   return (
     <>
-      {count && <EditCardForm count={count} />}
+      {/* {count && <EditCardForm count={count} />} */}
       <button className={styles.addBtn} onClick={onAddCard}>
         <i className="fa-solid fa-plus"></i>
       </button>

@@ -25,3 +25,13 @@
 @value makerDarkPink: #e38b8a;
 
 @value makerMiddlePink: #ecd6d9;
+
+@value makerShadow: rgba(217, 217, 217 1);
+
+@value makerColorful;
+
+@value makerDarkPurple: RGB(179, 171, 194);
+
+@value makerMiddlePurple: RGB(219, 206, 223);
+
+@value makerLightPurple: RGB(229, 218, 232);

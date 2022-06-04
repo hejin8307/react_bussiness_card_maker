@@ -3,7 +3,17 @@
 input,
 textarea,
 select {
+  width: 100%;
   border: 1px solid RGB(223, 214, 207, 0.7);
+}
+
+input,
+select {
+  flex: 1 1 30%;
+}
+
+textarea {
+  flex-basis: 100%;
 }
 
 select {
@@ -14,21 +24,10 @@ select {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin: 0.5rem;
+  width: 100%;
+  /* padding: 0.5rem; */
 }
 
-.content > *:nth-child(-n + 4) {
-  flex: 1 1 30%;
-}
-
-.content > *:nth-child(n + 4):nth-child(-n + 5) {
-  flex: 1 1 45%;
-}
-
-.content > *:nth-child(n + 5) {
-  flex: 1 1 100%;
-}
-
-.deleteBtn {
-  border: 0;
+.fileInput {
+  flex: 1 1 50%;
 }
