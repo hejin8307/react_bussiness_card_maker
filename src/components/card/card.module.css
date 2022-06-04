@@ -1,4 +1,4 @@
-@value makerWheat, makerShadow, makerDarkPurple, makerMiddlePurple, makerLightPurple from '../../common/colors.css';
+@value makerWheat, makerShadow, makerDarkPink, makerMiddlePink, makerLightPink from '../../common/colors.css';
 
 .card {
   display: flex;
@@ -13,17 +13,17 @@
 }
 
 .card.dark {
-  background-color: makerDarkPurple;
+  background-color: makerDarkPink;
   color: makerWhite;
 }
 
 .card.middle {
-  background-color: makerMiddlePurple;
+  background-color: makerMiddlePink;
   color: makerBlack;
 }
 
 .card.light {
-  background: makerLightPurple;
+  background: makerLightPink;
 }
 
 .info {
