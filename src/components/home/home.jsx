@@ -31,12 +31,17 @@ const Home = ({authService}) => {
       fileURL: null,
     },
   ]);
+
+  const addCard = (card) => {
+    const update = [...cards, card];
+    setCards(update);
+  };
   return (
     <div className={styles.content}>
       <Header authService={authService} />
       <section className={styles.main}>
         {/* 강의에서는 editor */}
-        <Maker cards={cards} />
+        <Maker cards={cards} addCard={addCard} />
         <Preview cards={cards} />
       </section>
       <Footer />

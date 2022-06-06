@@ -24,10 +24,10 @@ function getStyles(theme) {
   switch (theme) {
     case 'dark':
       return styles.dark;
-    case 'middle':
-      return styles.middle;
     case 'light':
       return styles.light;
+    case 'middle':
+      return styles.middle;
     default:
       throw new Error(`unknown theme: ${theme}`);
   }

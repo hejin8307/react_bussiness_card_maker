@@ -8,3 +8,35 @@
   border: 0;
   border-radius: 1rem;
 }
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid RGB(223, 214, 207, 0.7);
+}
+
+input,
+select {
+  flex: 1 1 30%;
+}
+
+textarea {
+  flex-basis: 100%;
+}
+
+select {
+  color: gray;
+}
+
+.content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+  /* padding: 0.5rem; */
+}
+
+.fileInput {
+  flex: 1 1 50%;
+}
