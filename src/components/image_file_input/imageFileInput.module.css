@@ -1,9 +1,11 @@
-@value makerWhite, makerMiddlePink from '../../common/colors.css';
+@value makerPink, makerDarkBeige, makerWhite, makerMiddlePink from '../../common/colors.css';
 
 .content {
   display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .input {
@@ -14,12 +16,39 @@
   font-size: 0.8rem;
   font-weight: bold;
   width: 100%;
+  height: 100%;
   color: makerWhite;
-  background-color: makerMiddlePink;
   border: 0;
   outline: 0;
 }
 
+.button.pink {
+  background-color: makerMiddlePink;
+}
+
+.button.beige {
+  background-color: makerDarkBeige;
+}
+
 .button:hover {
   opacity: 0.8;
+}
+
+.loading {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 3px solid makerWhite;
+  border-top: 3px solid makerPink;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    trnasform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
