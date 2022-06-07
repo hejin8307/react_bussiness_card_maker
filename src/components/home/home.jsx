@@ -6,7 +6,7 @@ import Preview from '../preview/preview';
 import Footer from '../footer/footer';
 
 // 강의에서는 home이 maker
-const Home = ({authService}) => {
+const Home = ({authService, FileInput}) => {
   const [cards, setCards] = useState({
     1: {
       id: '1',
@@ -47,11 +47,18 @@ const Home = ({authService}) => {
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
-      const updated = {...cards};
-      updated[card.id] = card;
+      // setCards를 부를때의 시점에 있는 cards 값들을 그대로 복사해와서
+      const updated = {...cards}; // updated에 그대로 복사해 넣고
+      updated[card.id] = card; // 업데이트한다
       return updated;
     });
+
+    // const updated = {...cards}; // 기존의 cards들을 updated에 할당시켜주고
+    // updated[card.id] = card; // 변경되는 card의 id를 updated에서 찾아 변경되는 card로 변경
+    // setCards(updated);
   };
+
+  const uploadImage = () => {};
 
   return (
     <div className={styles.content}>
@@ -59,6 +66,7 @@ const Home = ({authService}) => {
       <section className={styles.main}>
         {/* 강의에서는 editor */}
         <Maker
+          FileInput={FileInput}
           cards={cards}
           addCard={createOrUpdateCard}
           deleteCard={deleteCard}
