@@ -2,19 +2,7 @@ import React, {useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from './header.module.css';
 
-const Header = ({authService}) => {
-  const navigate = useNavigate();
-
-  const onLogout = () => {
-    authService.logout();
-  };
-
-  useEffect(() => {
-    authService.onAuthChange((user) => {
-      !user && navigate('/');
-    });
-  });
-
+const Header = ({onLogout}) => {
   return (
     <div className={styles.header}>
       <h1>Business Card Maker</h1>

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import styles from './home.module.css';
 import Header from '../header/header';
 import Maker from '../maker/maker';
@@ -6,44 +7,40 @@ import Preview from '../preview/preview';
 import Footer from '../footer/footer';
 
 // 강의에서는 home이 maker
-const Home = ({authService, FileInput}) => {
-  const [cards, setCards] = useState({
-    1: {
-      id: '1',
-      name: 'Jane',
-      company: 'Samsung',
-      theme: 'dark',
-      title: 'Software Engineer',
-      email: 'jane@gmail.com',
-      message: 'go for it',
-      fileName: 'jane',
-      fileURL: 'jane.png',
-    },
-    2: {
-      id: '2',
-      name: 'Kelly',
-      company: 'Samsung',
-      theme: 'light',
-      title: 'Software Engineer',
-      email: 'kelly@gmail.com',
-      message: 'do it now',
-      fileName: 'kelly',
-      fileURL: null,
-    },
+const Home = ({FileInput, authService, cardRepository}) => {
+  const navigate = useNavigate();
+  const navigateState = useLocation().state;
+  const [cards, setCards] = useState({});
+  const [userId, setUserId] = useState(navigateState && navigateState.id);
+
+  const onLogout = () => {
+    authService.logout();
+  };
+
+  useEffect(() => {
+    if (!userId) {
+      return;
+    }
+    const stopSync = cardRepository.syncCards(userId, (cards) => {
+      setCards(cards);
+    });
+    return () => stopSync();
+  }, [userId]); // mount가 되거나 userId가 변경될때마다 사용
+
+  useEffect(() => {
+    authService.onAuthChange((user) => {
+      if (user) {
+        setUserId(user.uid);
+      } else {
+        navigate('/');
+      }
+    });
   });
 
   //   const addCard = (card) => {
   //     const update = [...cards, card];
   //     setCards(update);
   //   };
-
-  const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = {...cards};
-      delete updated[card.id];
-      return updated;
-    });
-  };
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
@@ -52,17 +49,26 @@ const Home = ({authService, FileInput}) => {
       updated[card.id] = card; // 업데이트한다
       return updated;
     });
+    cardRepository.saveCard(userId, card);
+    console.log(card);
 
     // const updated = {...cards}; // 기존의 cards들을 updated에 할당시켜주고
     // updated[card.id] = card; // 변경되는 card의 id를 updated에서 찾아 변경되는 card로 변경
     // setCards(updated);
   };
 
-  const uploadImage = () => {};
+  const deleteCard = (card) => {
+    setCards((cards) => {
+      const updated = {...cards};
+      delete updated[card.id];
+      return updated;
+    });
+    cardRepository.removeCard(userId, card);
+  };
 
   return (
     <div className={styles.content}>
-      <Header authService={authService} />
+      <Header onLogout={onLogout} />
       <section className={styles.main}>
         {/* 강의에서는 editor */}
         <Maker
