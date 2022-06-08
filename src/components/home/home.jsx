@@ -25,7 +25,7 @@ const Home = ({FileInput, authService, cardRepository}) => {
       setCards(cards);
     });
     return () => stopSync();
-  }, [userId]); // mount가 되거나 userId가 변경될때마다 사용
+  }, [userId, cardRepository]); // mount가 되거나 userId가 변경될때마다 사용
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -35,7 +35,7 @@ const Home = ({FileInput, authService, cardRepository}) => {
         navigate('/');
       }
     });
-  });
+  }, [authService, userId, navigate]); // authService가 바뀔때마다 실행
 
   //   const addCard = (card) => {
   //     const update = [...cards, card];
@@ -50,7 +50,6 @@ const Home = ({FileInput, authService, cardRepository}) => {
       return updated;
     });
     cardRepository.saveCard(userId, card);
-    console.log(card);
 
     // const updated = {...cards}; // 기존의 cards들을 updated에 할당시켜주고
     // updated[card.id] = card; // 변경되는 card의 id를 updated에서 찾아 변경되는 card로 변경

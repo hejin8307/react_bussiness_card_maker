@@ -13,7 +13,6 @@ const AddCardForm = ({FileInput, onAdd}) => {
   const [file, setFile] = useState({fileName: null, fileURL: null});
 
   const onFileChange = (file) => {
-    console.log(file);
     setFile({
       fileName: file.name,
       fileURL: file.url,
@@ -90,9 +89,9 @@ const AddCardForm = ({FileInput, onAdd}) => {
         </div>
         <Button name="Add" onClick={onSubmit} />
       </form>
-      <button className={styles.addBtn}>
+      {/* <button className={styles.addBtn}>
         <i className="fa-solid fa-plus"></i>
-      </button>
+      </button> */}
     </>
   );
 };
