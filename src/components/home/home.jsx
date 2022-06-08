@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import styles from './home.module.css';
 import Header from '../header/header';
@@ -13,9 +13,9 @@ const Home = ({FileInput, authService, cardRepository}) => {
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(navigateState && navigateState.id);
 
-  const onLogout = () => {
+  const onLogout = useCallback(() => {
     authService.logout();
-  };
+  }, [authService]);
 
   useEffect(() => {
     if (!userId) {
@@ -64,6 +64,8 @@ const Home = ({FileInput, authService, cardRepository}) => {
     });
     cardRepository.removeCard(userId, card);
   };
+
+  console.log('home');
 
   return (
     <div className={styles.content}>

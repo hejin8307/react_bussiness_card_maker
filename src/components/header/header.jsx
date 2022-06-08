@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, {memo} from 'react';
 import styles from './header.module.css';
 
-const Header = ({onLogout}) => {
+const Header = memo(({onLogout}) => {
+  console.log('header');
   return (
     <div className={styles.header}>
       <h1>Business Card Maker</h1>
@@ -11,6 +11,6 @@ const Header = ({onLogout}) => {
       </button>
     </div>
   );
-};
+});
 
 export default Header;
