@@ -38,6 +38,6 @@
   - can add, modify and add cards
 
 ## 💻 URL
-[Hyejin's Business Card Maker](https://hyejin-business-card-maker.netlify.app/home)
+[Hyejin's Business Card Maker](https://hyejin-business-card-maker.netlify.app)
 
 ## 📖 Todo
