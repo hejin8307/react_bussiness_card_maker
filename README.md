@@ -8,7 +8,9 @@
   <img src="https://img.shields.io/badge/PostCSS-DD3A0A" />
   <img src="https://img.shields.io/badge/Javascript-F7DF1E" />
   <img src="https://img.shields.io/badge/React-61DAFB" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28" />
+  <img src="https://img.shields.io/badge/Cloudinary-3448c5" />
+  <img src="https://img.shields.io/badge/Npm-CB3837" />
   <img src="https://img.shields.io/badge/Yarn-2C8EBB" />
   <img src="https://img.shields.io/badge/Netlify-00C7B7" />
 
