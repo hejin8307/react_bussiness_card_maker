@@ -37,7 +37,15 @@
 - Login page
   - can login using Google account and Github
 - Main page
-  - can add, modify and add cards
+  - can add, delete and edit cards
+
+## ✔ Done
+- Connected Firebase on Web
+- Implemented to enable social login using the Firebase Authentication function
+- Implemented to store information (name, company name, job title, email, motto, image, business card color) in business cards using the Firebase real-time database function
+- Implemented to be able to upload images using Cloudinary
+- Devided pages using React Router
+- Deploy
 
 ## 💻 URL
 [Hyejin's Business Card Maker](https://hyejin-business-card-maker.netlify.app)
